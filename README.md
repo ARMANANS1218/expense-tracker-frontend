@@ -74,7 +74,7 @@ Value: https://backend_url/api
 Vercel will automatically build and deploy your React app. For more details, see Vercel documentation.
 
 Screenshots
-![Light Mode Screenshot](light-mode1.png)
+![Light Mode Screenshot](lightmode1.png)
 
 Frontend - Light Mode
 ![Light Mode Screenshot](lightmode2.png)

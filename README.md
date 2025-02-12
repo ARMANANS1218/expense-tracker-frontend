@@ -4,7 +4,7 @@ This is the frontend for the Expense Tracker application. Built with React and M
 
 ## Live Demo
 
-[Expense Tracker Frontend](https://expense-tracker-frontend.example.com)  
+[Expense Tracker Frontend](https://expense-tracker-frontend-gilt-nu.vercel.app/)  
 *(Replace the link with your deployed Vercel URL)*
 
 ## Features
@@ -74,10 +74,14 @@ Value: https://backend_url/api
 Vercel will automatically build and deploy your React app. For more details, see Vercel documentation.
 
 Screenshots
+![Light Mode Screenshot](light-mode1.png)
+
 Frontend - Light Mode
+![Light Mode Screenshot](lightmode2.png)
 
 
 Frontend - Dark Mode
+![Light Mode Screenshot](darkmode.png)
 
 
 Note: Replace the placeholder images in the assets/ folder with your actual screenshots.

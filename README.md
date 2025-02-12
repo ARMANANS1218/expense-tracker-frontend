@@ -70,7 +70,7 @@ Deployment
 The frontend is deployed on Vercel. When configuring your project on Vercel, ensure you add the environment variable:
 
 Key: REACT_APP_API_URL
-Value: https://expense-tracker-backend-lma3.onrender.com/api
+Value: https://backend_url/api
 Vercel will automatically build and deploy your React app. For more details, see Vercel documentation.
 
 Screenshots
@@ -89,7 +89,7 @@ Axios – HTTP client for API calls
 React Router – Declarative routing for React
 Troubleshooting
 API 404 Errors:
-Make sure that the environment variable REACT_APP_API_URL includes the /api prefix so that endpoints resolve correctly (e.g., https://expense-tracker-backend-lma3.onrender.com/api/auth/register).
+Make sure that the environment variable REACT_APP_API_URL includes the /api prefix so that endpoints resolve correctly (e.g., https://backend_url/api/auth/register).
 
 Manifest Icon Issues:
 If you see errors related to logo192.png, verify that the file exists in your public folder and is a valid image.

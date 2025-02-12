@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Expense Tracker Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the Expense Tracker application. Built with React and Material UI, this application allows users to register, log in, and manage their expenses with features such as adding, editing, and deleting expenses. It also supports a dark/light mode toggle and integrates with the backend API.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+[Expense Tracker Frontend](https://expense-tracker-frontend.example.com)  
+*(Replace the link with your deployed Vercel URL)*
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication:** Register and log in with email and password.
+- **Expense Management:** Add, edit, delete, and list expenses.
+- **Export to PDF:** Generate a PDF report of expenses.
+- **Dark/Light Mode:** Toggle between a beautiful light mode (with a background image) and a dark mode.
+- **Responsive UI:** Built using Material UI for a modern, responsive design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
+client/ ├── public/ │ ├── index.html │ ├── manifest.json │ └── logo192.png # Ensure this image is valid for PWA use ├── src/ │ ├── api.js # API helper functions (Axios) │ ├── App.js # Main application and routing │ ├── index.js # React entry point │ ├── context/ │ │ ├── AuthContext.jsx │ │ └── ThemeContext.jsx │ └── components/ │ ├── Auth/ │ │ ├── Login.jsx │ │ └── Register.jsx │ ├── Dashboard.jsx │ ├── ExpenseForm.jsx │ ├── ExpenseList.jsx │ ├── EditExpenseDialog.jsx │ ├── NavBar.jsx │ └── HomePage.jsx └── README.md
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- **Node.js:** v14 or higher is recommended.
+- **npm** or **yarn**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/expense-tracker-frontend.git
+expense-tracker-frontend.git
+Navigate to the project folder:
 
-### `npm run eject`
+bash
+Copy
+Edit
+cd expense-tracker-frontend
+Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copy
+Edit
+npm install
+or, if you prefer Yarn:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy
+Edit
+yarn install
+Configure Environment Variables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a .env file in the root directory and add:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+dotenv
+Copy
+Edit
+REACT_APP_API_URL=https://expense-tracker-backend-lma3.onrender.com/api
+Note: Ensure the API URL includes the /api prefix since the backend mounts routes under /api.
 
-## Learn More
+Start the Development Server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy
+Edit
+npm start
+The app should now be running at http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Deployment
+The frontend is deployed on Vercel. When configuring your project on Vercel, ensure you add the environment variable:
 
-### Code Splitting
+Key: REACT_APP_API_URL
+Value: https://expense-tracker-backend-lma3.onrender.com/api
+Vercel will automatically build and deploy your React app. For more details, see Vercel documentation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Screenshots
+Frontend - Light Mode
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Frontend - Dark Mode
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Note: Replace the placeholder images in the assets/ folder with your actual screenshots.
 
-### Advanced Configuration
+Technologies Used
+React.js – JavaScript library for building user interfaces
+Material UI – UI framework for React
+Axios – HTTP client for API calls
+React Router – Declarative routing for React
+Troubleshooting
+API 404 Errors:
+Make sure that the environment variable REACT_APP_API_URL includes the /api prefix so that endpoints resolve correctly (e.g., https://expense-tracker-backend-lma3.onrender.com/api/auth/register).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Manifest Icon Issues:
+If you see errors related to logo192.png, verify that the file exists in your public folder and is a valid image.

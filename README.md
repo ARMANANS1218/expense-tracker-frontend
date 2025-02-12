@@ -16,7 +16,51 @@ This is the frontend for the Expense Tracker application. Built with React and M
 - **Responsive UI:** Built using Material UI for a modern, responsive design.
 
 ## Project Structure
-client/ ├── public/ │ ├── index.html │ ├── manifest.json │ └── logo192.png # Ensure this image is valid for PWA use ├── src/ │ ├── api.js # API helper functions (Axios) │ ├── App.js # Main application and routing │ ├── index.js # React entry point │ ├── context/ │ │ ├── AuthContext.jsx │ │ └── ThemeContext.jsx │ └── components/ │ ├── Auth/ │ │ ├── Login.jsx │ │ └── Register.jsx │ ├── Dashboard.jsx │ ├── ExpenseForm.jsx │ ├── ExpenseList.jsx │ ├── EditExpenseDialog.jsx │ ├── NavBar.jsx │ └── HomePage.jsx └── README.md
+expense-tracker-demo/
+├── client/                     # Frontend React application
+│   ├── public/
+│   │   ├── index.html          # HTML template
+│   │   ├── manifest.json       # PWA manifest file
+│   │   └── logo192.png         # App icon (ensure this is valid)
+│   ├── src/
+│   │   ├── api.js              # Axios API helper functions
+│   │   ├── App.js              # Main application and routing
+│   │   ├── index.js            # React entry point
+│   │   ├── context/            
+│   │   │   ├── AuthContext.jsx # Context for user authentication
+│   │   │   └── ThemeContext.jsx# Context for dark/light mode theming
+│   │   └── components/
+│   │       ├── Auth/           # Authentication components
+│   │       │   ├── Login.jsx   # Login page
+│   │       │   └── Register.jsx# Registration page
+│   │       ├── Dashboard.jsx   # Dashboard for expense management
+│   │       ├── ExpenseForm.jsx # Form for adding expenses
+│   │       ├── ExpenseList.jsx # List of expenses with edit & delete
+│   │       ├── EditExpenseDialog.jsx # Modal for editing an expense
+│   │       ├── NavBar.jsx      # Navigation bar with dark mode toggle
+│   │       └── HomePage.jsx    # Landing/home page for new users
+│   └── package.json            # Frontend package configuration
+│
+├── server/                     # Backend Express API
+│   ├── config/
+│   │   └── db.js               # MongoDB connection configuration
+│   ├── controllers/
+│   │   ├── authController.js   # Handlers for user authentication
+│   │   └── expenseController.js# Handlers for expense management
+│   ├── middleware/
+│   │   └── auth.js             # JWT authentication middleware
+│   ├── models/
+│   │   ├── User.js             # User schema/model
+│   │   └── Expense.js          # Expense schema/model
+│   ├── routes/
+│   │   ├── auth.js             # Authentication routes (mounted at /api/auth)
+│   │   └── expenses.js         # Expense routes (mounted at /api/expenses)
+│   ├── .env                    # Environment variables (do not commit sensitive info)
+│   ├── app.js                  # Main Express application file
+│   └── package.json            # Backend package configuration
+│
+└── README.md                   # Project documentation and instructions
+
 
 ## Getting Started
 
